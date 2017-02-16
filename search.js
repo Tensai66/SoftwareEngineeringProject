@@ -6,8 +6,12 @@ function successCallback(data) {
     $('#cat').text('');
     data = JSON.parse(data);
     for(i = 0; i < data.results.length; i++) {
-      var imageUrl = localStorage.getItem('BaseUrl') + 'w500' + data.results[i].poster_path;
-      $('#cat').append('<li>' + '<img id=pic1 src="' + imageUrl + '"/>' + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>");
+      if (data.results[i].poster_path) {
+        var imageUrl = localStorage.getItem('BaseUrl') + 'w500' + data.results[i].poster_path;
+        $('#cat').append('<li>' + '<img id=pic1 src="' + imageUrl + '"/>' + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>");
+      } else {
+        $('#cat').append('<li>' + '<img id=pic1 src="popcorn.jpg"/>' + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>");
+      }
     }
 }
 
