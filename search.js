@@ -7,9 +7,7 @@ function successCallback(data) {
     data = JSON.parse(data);
     for(i = 0; i < data.results.length; i++) {
       var imageUrl = localStorage.getItem('BaseUrl') + 'w500' + data.results[i].poster_path;
-
-      $('#cat').append('<li>' +'<img id=pic1 src="' + imageUrl + '"/>' + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>");
-      //$('#sammy').append('<img src="' + imageUrl + '" />' + '<br>')
+      $('#cat').append('<li>' + '<img id=pic1 src="' + imageUrl + '"/>' + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>");
     }
 }
 
