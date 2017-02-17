@@ -9,10 +9,10 @@ function successCallback(data) {
       if (data.results[i].poster_path) {
         var imageUrl = localStorage.getItem('BaseUrl') + 'w500' + data.results[i].poster_path;
         $('#cat').append('<li>' + '<img class="pic1" src="' + imageUrl + '"/>'
-        + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>" + data.results[i].overview);
+        + '<h3 class="movTitle">' + data.results[i].title + '</h3>' + '<p class="desc">Description</p>' + '<p class="overview">' + data.results[i].overview + '<p>');
       } else {
-        $('#cat').append('<li>' + '<img class="pic1" src="popcorn.jpg"/>' + "<h3>" 
-        + data.results[i].title + "</h3>" + "<p>Description</p>" + data.results[i].overview);
+        $('#cat').append('<li>' + '<img class="pic1" src="popcorn.jpg"/>' + '<h3 class="movTitle">' 
+        + data.results[i].title + '</h3>' + '<p class="desc">Description</p>' + '<p class="overview">' + data.results[i].overview + '<p>');
       }
     }
 }
@@ -29,10 +29,10 @@ function clickButton() {
       theMovieDb.search.getMovie(options, successCallback, errorCallback);
     } else if (selected == "genre") {
       $('#cat').text('');
-      $('#cat').append('<li>' + '<p>Sorry, the Genre feature has not been added yet. Try searching by Title</p>');
+      $('#cat').append('<li>' + '<p class="notreadyMessage">Sorry, the Genre feature has not been added yet. Try searching by Title</p>');
     } else if (selected == "year") {
       $('#cat').text('');
-      $('#cat').append('<li>' + '<p> Sorry, the Year feature has not been added yet. Try searching by Title</p>');
+      $('#cat').append('<li>' + '<p class="notreadyMessage">Sorry, the Year feature has not been added yet. Try searching by Title</p>');
     }
 }
 
