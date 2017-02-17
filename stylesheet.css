@@ -1,70 +1,79 @@
 body {
-    background:#e7e7e7;
+  background:#343d46;
+  /* background:#e7e7e7; diff color bg don't remove */
+}
+
+#timmy {
+  text-align:center;
 }
 
 div.rig {
-    list-style: none;
-    font-size: 0px;
-    margin-left: -2.5%; /* shodivd match li left margin */
+  margin-top: 25px;
+  list-style: none;
+  font-size: 0px;
+  margin-left: -2.5%; /* shodivd match li left margin */
 }
 div.rig li {
-    display: inline-block;
-    padding: 10px;
-    margin: 0 0 2.5% 2.5%;
-    background: #fff;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    font-size: 1rem;
-    vertical-align: top;
-    box-shadow: 0 0 5px #ddd;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 2.5%;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 div.rig li img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 0 10px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
 }
 div.rig li h3 {
-    margin: 0 0 5px;
+  margin: 0 0 5px;
 }
 div.rig li p {
-    font-size: .9em;
-    line-height: 1.5em;
-    color: #999;
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
 }
 
 /* class for 3 columns */
 div.rig.columns-3 li {
-    width: 30.83%; /* this value + 2.5 shodivd = 33% */
+  width: 30.83%; /* this value + 2.5 shodivd = 33% */
 }
-
 
 @media (max-width: 480px) {
-    div.grid-nav li {
-       display: block;
-       margin: 0 0 5px;
-   }
-   div.grid-nav li a {
-       display: block;
-   }
-   div.rig {
-       margin-left: 0;
-   }
-   div.rig li {
-       width: 100% !important; /* over-ride all li styles */
-       margin: 0 0 20px;
-   }
-}
+  div.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  div.grid-nav li a {
+    display: block;
+  }
+  div.rig {
+    margin-left: 0;
+  }
+  div.rig li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+    }
+  }
 
 
 #pic1 {
-    max-width: 100%;
-    max-height: 100%;
-    transition: .2s all;
+  max-width: 100%;
+  max-height: 100%;
+  transition: .2s all;
 }
 
 #pic1:hover {
-    -webkit-filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+}
+
+#test {
+  display:none;
 }
