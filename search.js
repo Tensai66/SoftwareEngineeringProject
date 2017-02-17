@@ -21,10 +21,18 @@ function errorCallback(data) {
 }
 
 function clickButton() {
-    var search = $('#myText').val(),
-        options = {"query":search};
-  theMovieDb.configurations.getConfiguration(configSuccessCallBack, errorCallback);
-  theMovieDb.search.getMovie(options, successCallback, errorCallback);
+    var search = $('#myText').val(), options = {"query":search};
+    var selected = $('select[name=type]').val();
+    theMovieDb.configurations.getConfiguration(configSuccessCallBack, errorCallback);
+    if (selected == "title") {
+      theMovieDb.search.getMovie(options, successCallback, errorCallback);
+    } else if (selected == "genre") {
+      $('#cat').text('');
+      $('#cat').append('<li>' + '<p>Sorry, the Genre feature has not been added yet. Try searching by Title</p>');
+    } else if (selected == "year") {
+      $('#cat').text('');
+      $('#cat').append('<li>' + '<p> Sorry, the Year feature has not been added yet. Try searching by Title</p>');
+    }
 }
 
 $('#search').click(clickButton);
