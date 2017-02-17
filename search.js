@@ -8,10 +8,10 @@ function successCallback(data) {
     for(i = 0; i < data.results.length; i++) {
       if (data.results[i].poster_path) {
         var imageUrl = localStorage.getItem('BaseUrl') + 'w500' + data.results[i].poster_path;
-        $('#cat').append('<li>' + '<img id="pic1" src="' + imageUrl + '"/>'
-        + "<h3 class="movTitle">" + data.results[i].title + "</h3>" + "<p>Description</p>" + data.results[i].overview);
+        $('#cat').append('<li>' + '<img class="pic1" src="' + imageUrl + '"/>'
+        + "<h3>" + data.results[i].title + "</h3>" + "<p>Description</p>" + data.results[i].overview);
       } else {
-        $('#cat').append('<li>' + '<img id="pic1" src="popcorn.jpg"/>' + "<h3 class="movTitle">" 
+        $('#cat').append('<li>' + '<img class="pic1" src="popcorn.jpg"/>' + "<h3>" 
         + data.results[i].title + "</h3>" + "<p>Description</p>" + data.results[i].overview);
       }
     }

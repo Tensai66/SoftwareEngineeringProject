@@ -64,16 +64,12 @@ div.rig.columns-3 li {
   }
 
 
-#pic1 {
+.pic1 {
   max-width: 100%;
   max-height: 100%;
   transition: .2s all;
 }
 
-#pic1:hover {
+.pic1:hover {
   -webkit-filter: brightness(50%);
-}
-
-#test {
-  display:none;
 }
