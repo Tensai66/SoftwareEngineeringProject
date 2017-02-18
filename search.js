@@ -18,21 +18,24 @@ function successCallback(data) {
 }
 
 function errorCallback(data) {
-    $('#sammy').text('Please enter some valid search data');
+    $('#cat').text('');
+    $('#cat').append('<li>' + 'Please enter some valid search data');
 }
 
 function clickButton() {
-    var search = $('#myText').val(), options = {"query":search};
+    var search = $('#myText').val();
+    var options;
     var selected = $('select[name=type]').val();
     theMovieDb.configurations.getConfiguration(configSuccessCallBack, errorCallback);
     if (selected == "title") {
+      options = {"query":search};
       theMovieDb.search.getMovie(options, successCallback, errorCallback);
     } else if (selected == "genre") {
-      $('#cat').text('');
-      $('#cat').append('<li>' + '<p class="notreadyMessage">Sorry, the Genre feature has not been added yet. Try searching by Title</p>');
+      options = {"with_genres":search};
+      theMovieDb.discover.getMovies(options, successCallback, errorCallback);
     } else if (selected == "year") {
-      $('#cat').text('');
-      $('#cat').append('<li>' + '<p class="notreadyMessage">Sorry, the Year feature has not been added yet. Try searching by Title</p>');
+      options = {"primary_release_year":Number(search)};
+      theMovieDb.discover.getMovies(options, successCallback, errorCallback);
     }
 }
 
