@@ -91,7 +91,7 @@ div.rig.columns-3 li {
 }
 
 .desc:hover {
-   color: lightseagreen;
+   color: mediumpurple;
 }
 
 .overview {
@@ -112,10 +112,17 @@ div.rig.columns-3 li {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   border-radius: 25px;
+  outline: none;
+  box-shadow: 0 9px grey;
 }
 
 #search:hover {
   background: deepskyblue;
+}
+
+#search:active {
+  box-shadow: 0 5px grey;
+  transform: translateY(4px);
 }
 
 #typemenu {
@@ -127,6 +134,7 @@ div.rig.columns-3 li {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  outline: none;
 }
 
 #typemenu:hover  {
@@ -143,4 +151,5 @@ div.rig.columns-3 li {
   font-family: Arial, Helvetica, sans-serif;
   color: mediumpurple;
   border-radius: 50px;
+  outline: none;
 }
