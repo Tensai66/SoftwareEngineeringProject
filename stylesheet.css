@@ -101,3 +101,46 @@ div.rig.columns-3 li {
 .overview:hover {
    color: lightseagreen;
 }
+
+#search {
+  background: lightskyblue;
+  width: 50;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid ghostwhite;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+#search:hover {
+  background: deepskyblue;
+}
+
+#typemenu {
+  background: lightgreen;
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid ghostwhite;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#typemenu:hover  {
+  background: limegreen;
+}
+
+#myText {
+  width: 250px;
+  border: 2px solid mediumpurple;
+  padding: 5px;
+  font-size: 16px;
+  background: ghostwhite;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: mediumpurple;
+  border-radius: 50px;
+}
