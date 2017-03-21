@@ -1,6 +1,8 @@
 body {
-  background:#343d46;
-  /* background:#e7e7e7; diff color bg don't remove */
+  background-color: darkslategray;
+  background-image: url(https://artfiles.alphacoders.com/752/75261.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #timmy {
@@ -17,8 +19,9 @@ div.rig li {
   display: inline-block;
   padding: 10px;
   margin: 0 0 2.5% 2.5%;
-  background: #fff;
+  background: honeydew;
   border: 1px solid #ddd;
+  border-radius: 20px;
   font-size: 16px;
   font-size: 1rem;
   vertical-align: top;
@@ -31,6 +34,7 @@ div.rig li img {
   max-width: 100%;
   height: auto;
   margin: 0 0 10px;
+  border-radius: 20px;
 }
 div.rig li h3 {
   margin: 0 0 5px;
@@ -111,7 +115,7 @@ div.rig.columns-3 li {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 0px;
   outline: none;
   box-shadow: 0 9px grey;
 }
@@ -128,13 +132,13 @@ div.rig.columns-3 li {
 #typemenu {
   background: lightgreen;
   width: 150px;
+  height: 35px;
   padding: 5px;
   font-size: 16px;
-  border: 2px solid ghostwhite;
+  border: 1px solid ghostwhite;
+  border-radius: 0px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  outline: none;
 }
 
 #typemenu:hover  {
@@ -143,13 +147,14 @@ div.rig.columns-3 li {
 
 #myText {
   width: 250px;
-  border: 2px solid mediumpurple;
+  height: 20px;
+  border: 1px solid grey;
   padding: 5px;
   font-size: 16px;
-  background: ghostwhite;
+  background: white;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  color: mediumpurple;
-  border-radius: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: cornflowerblue;
+  border-radius: 0px;
   outline: none;
 }
