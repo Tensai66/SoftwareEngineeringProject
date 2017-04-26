@@ -24,8 +24,9 @@ function errorCallback(data) {
 
 function findSimilar(data) {
   data = JSON.parse(data);
-  options = {"id":data.results[0].id}
-  theMovieDb.movies.getSimilarMovies(options, successCallback, errorCallback);
+  id = data.results[0].id;
+  options = {"id":id}
+  theMovieDb.movies.getRecommendations(options, successCallback, errorCallback);
 }
 
 function searchGenre(genre) {
