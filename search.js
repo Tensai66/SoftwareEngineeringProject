@@ -22,6 +22,28 @@ function errorCallback(data) {
     $('#cat').append('<li>' + 'Please enter some valid search data');
 }
 
+function findSimilar(data) {
+  data = JSON.parse(data);
+  options = {"id":data.results[0].id}
+  theMovieDb.movies.getSimilarMovies(options, successCallback, errorCallback);
+}
+
+function searchGenre(genre) {
+  if (genre == "Action") {
+    options = {"with_genres":28}
+    theMovieDb.discover.getMovies(options, successCallback, errorCallback);
+  } else if (genre == "Comedy") {
+    options = {"with_genres":35}
+    theMovieDb.discover.getMovies(options, successCallback, errorCallback);
+  } else if (genre == "Drama") {
+    options = {"with_genres":18}
+    theMovieDb.discover.getMovies(options, successCallback, errorCallback);
+  } else if (genre == "Family") {
+    options = {"with_genres":10751}
+    theMovieDb.discover.getMovies(options, successCallback, errorCallback);
+  }
+}
+
 function clickButton() {
     var search = $('#myText').val();
     var options;
@@ -33,9 +55,13 @@ function clickButton() {
     } else if (selected == "genre") {
       options = {"with_genres":search};
       theMovieDb.discover.getMovies(options, successCallback, errorCallback);
+      searchGenre(search);
     } else if (selected == "year") {
       options = {"primary_release_year":Number(search)};
       theMovieDb.discover.getMovies(options, successCallback, errorCallback);
+    } else if (selected == "similar") {
+      options = {"query":search};
+      theMovieDb.search.getMovie(options, findSimilar, errorCallback);
     }
 }
 
