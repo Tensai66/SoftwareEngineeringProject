@@ -5,22 +5,26 @@
     <script src="themoviedb.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" href="movieIcon.jpg">
   </head>
   <body>
-      <p id="timmy">
+      <div id="timmy">
           <input id = "myText"
               type = "text"
-              value = ""/>
-          <select name="type">
+              value = ""
+              placeholder= "Search..."/>
+          <select id="typemenu" name="type">
               <option value="title">Title</option>
               <option value="genre">Genre</option>
               <option value="year">Year</option>
+              <option value="similar">Similar Movies</option>
           </select>
           <button id = "search">Search</button>
-      </p>
-      <section id = "pics">
-        <p id="sammy"></p>
-      </section>
+      </div>
+
+      <div id= "cat" class="rig columns-3">
+        <div id="overlay"></div>
+      </div>
           <script type="text/javascript" src="search.js"></script>
   </body>
 </html>
